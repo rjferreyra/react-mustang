@@ -1,7 +1,7 @@
 import { useParams, Link, useNavigate } from 'react-router-dom';
 import NavBar from '../../components/Header/NavBar/NavBar';
 import Footer from '../../components/Footer/Footer';
-import { models } from '@/data/models';
+import { models } from '@/assets/data/models';
 import './ModelDetailPage.css';
 
 function ModelDetailPage() {
