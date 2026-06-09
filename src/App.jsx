@@ -5,7 +5,7 @@ import NotFoundPage from './pages/NotFoundPage/NotFoundPage';
 
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/react-mustang">
       <Routes>
         <Route path="/" element={<LandingPage />} />
         <Route path="/modelos/:id" element={<ModelDetailPage />} />
