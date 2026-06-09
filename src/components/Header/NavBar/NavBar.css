@@ -1,0 +1,97 @@
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.7rem 1.5rem;
+    z-index: 1000;
+    flex-wrap: nowrap;
+}
+
+.navbar-right {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.navbar-mobile-dolar {
+    display: none;
+}
+
+.navbar ul {
+    display: flex;
+    list-style: none;
+}
+
+.navbar ul li a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    transition: 0.5s;
+}
+.navbar ul li a {
+    font-size: large;
+}
+ 
+.navbar ul li a:hover {
+    color: #2A6BAC;
+}
+
+.logo img{
+    width: 100px;
+}
+
+/* 📱 Mobile */
+@media (max-width: 768px) {
+    .navbar {
+        flex-wrap: wrap;
+        padding: 0.6rem 1rem;
+        gap: 4px;
+        justify-content: center;
+    }
+
+    .logo {
+        order: 1;
+    }
+
+    .navbar-right {
+        order: 2;
+        width: auto;
+        flex-direction: row;
+        align-items: center;
+        gap: 4px;
+    }
+
+    .navbar-right ul {
+        margin: 0;
+    }
+
+    .navbar-right .dolar-widget {
+        display: none;
+    }
+
+    .navbar-mobile-dolar {
+        order: 3;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        padding: 4px 8px;
+        border-top: 1px solid #222;
+        box-sizing: border-box;
+    }
+
+    .texto {
+        display: none;
+    }
+
+    .navbar ul li a i {
+        font-size: 20px;
+    }
+
+    .logo img {
+        width: 70px;
+    }
+}

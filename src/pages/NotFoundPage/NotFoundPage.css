@@ -1,0 +1,17 @@
+.notfound {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    text-align: center;
+}
+
+.notfound h2 {
+    font-size: 8rem;
+    color: #e74c3c;
+    line-height: 1;
+}
+
+.notfound p {
+    font-size: 1.2rem;
+    color: #ccc;
+}

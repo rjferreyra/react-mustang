@@ -1,0 +1,76 @@
+.dolar-widget {
+    background: rgba(10, 10, 10, 0.6);
+    border: 1px solid #2A6BAC;
+    border-radius: 8px;
+    padding: 6px 12px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    font-size: 0.75rem;
+    color: #ccc;
+    white-space: nowrap;
+}
+
+.dolar-titulo {
+    color: #47A8E5;
+    font-weight: bold;
+    font-size: 0.75rem;
+}
+
+.dolar-item {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    background: #1a1a1a;
+    padding: 3px 8px;
+    border-radius: 5px;
+}
+
+.dolar-label {
+    color: #47A8E5;
+    font-weight: bold;
+}
+
+.dolar-item strong {
+    color: #fff;
+}
+
+.dolar-hora {
+    color: #555;
+    font-size: 0.68rem;
+    text-align: right;
+}
+
+.dolar-items {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 6px;
+}
+
+@media (max-width: 768px) {
+    .dolar-widget {
+        font-size: 0.65rem;
+        padding: 4px 6px;
+        gap: 5px;
+        border-radius: 6px;
+    }
+
+    .dolar-titulo {
+        font-size: 0.65rem;
+    }
+
+    .dolar-items {
+        gap: 4px;
+    }
+
+    .dolar-item {
+        gap: 3px;
+        padding: 2px 5px;
+    }
+
+    .dolar-hora {
+        display: none;
+    }
+}
