@@ -1,34 +1,8 @@
-import { useState, useEffect } from 'react';
+import useDolar from '../../../hooks/useDolar';
 import './DolarWidget.css';
 
-const TIPOS_MOSTRAR = ['oficial', 'blue'];
-const INTERVALO_MS = 5 * 60 * 1000; // 5 minutos
-
 function DolarWidget() {
-    const [cotizaciones, setCotizaciones] = useState([]);
-    const [ultimaActualizacion, setUltimaActualizacion] = useState(null);
-    const [error, setError] = useState(false);
-
-    const fetchCotizaciones = async () => {
-        try {
-            const res = await fetch(import.meta.env.VITE_DOLAR_API_URL);
-            const data = await res.json();
-            const filtradas = data.filter(({ casa }) => TIPOS_MOSTRAR.includes(casa));
-            setCotizaciones(
-                filtradas.map(({ nombre, compra, venta }) => ({ label: nombre, compra, venta }))
-            );
-            setUltimaActualizacion(new Date());
-            setError(false);
-        } catch {
-            setError(true);
-        }
-    };
-
-    useEffect(() => {
-        fetchCotizaciones();
-        const intervalo = setInterval(fetchCotizaciones, INTERVALO_MS);
-        return () => clearInterval(intervalo);
-    }, []);
+    const { cotizaciones, ultimaActualizacion, error } = useDolar();
 
     if (error) return null;
 
